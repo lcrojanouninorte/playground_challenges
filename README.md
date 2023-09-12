@@ -1,5 +1,5 @@
 # 🚀 My Learning and Practice Journey
-
+Stack: Angular
 Welcome to my personal learning and practice repository! 👋
 
 In this repository, I'll be sharing my progress as I embark on exciting coding challenges and projects from various platforms, including Pla`<i>`tzi`</i>`, Coursera, Escalab, and more. 🌟
