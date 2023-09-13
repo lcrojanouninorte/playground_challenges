@@ -4,3 +4,6 @@
 [submodule "challenges/100-days-of-code"]
 	path = challenges/100-days-of-code
 	url = git@github.com:lcrojanouninorte/100-days-of-code.git
+[submodule "learn/platzi/curso git y github/hyperblog_"]
+	path = learn/platzi/curso git y github/hyperblog_
+	url = git@github.com:lcrojano/hyperblog_.git
