@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
+    box-sizing: border-box;
+
+}
+
+.card {
+    border-radius: 5px;
+    border: 1px solid rgba(102, 51, 153, 0.076);
+    box-shadow: black;
+    padding: 15px;
+    width: 500px;
+    height: 450px;
+    overflow-y: auto;
+}
