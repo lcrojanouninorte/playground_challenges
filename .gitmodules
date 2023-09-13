@@ -7,3 +7,6 @@
 [submodule "learn/platzi/curso git y github/hyperblog_"]
 	path = learn/platzi/curso git y github/hyperblog_
 	url = git@github.com:lcrojano/hyperblog_.git
+[submodule "content/lcrojano.github.io"]
+	path = content/lcrojano.github.io
+	url = git@github.com:lcrojano/lcrojano.github.io.git
