@@ -10,3 +10,6 @@
 [submodule "content/lcrojano.github.io"]
 	path = content/lcrojano.github.io
 	url = git@github.com:lcrojano/lcrojano.github.io.git
+[submodule "contributions/Image-Searcher"]
+	path = contributions/Image-Searcher
+	url = git@github.com:lcrojano/Image-Searcher.git
