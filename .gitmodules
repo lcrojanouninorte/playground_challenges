@@ -13,3 +13,6 @@
 [submodule "contributions/Image-Searcher"]
 	path = contributions/Image-Searcher
 	url = git@github.com:lcrojano/Image-Searcher.git
+[submodule "content/visual-merge-images"]
+	path = content/visual-merge-images
+	url = git@github.com:lcrojano/visual-merge-images.git
