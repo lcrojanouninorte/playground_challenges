@@ -1,0 +1,63 @@
+
+@keyframes dropdown {
+  from {
+    opacity: 1;
+    transform: translateY(-10px);
+    display: inline-block;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(0);
+    display: none;
+
+  }
+
+}
+#filter-component {
+
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 100%;
+  width: 300px;
+  color: gray;
+}
+#filter-component:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+  width: 300px;
+  height: 100%;
+}
+
+.card-dropped-down {
+  animation: dropdown forwards 0.3s ease;
+}
+
+.card-body {
+  text-align: center;
+}
+
+
+.card-footer {
+  text-align: center;
+}
