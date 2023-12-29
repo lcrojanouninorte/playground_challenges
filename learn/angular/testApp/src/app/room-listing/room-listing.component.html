@@ -1,0 +1,5 @@
+<p>Available Rooms</p>
+
+@for(room of rooms; track room.id){
+  <app-room-item [room]="room"></app-room-item>
+}
