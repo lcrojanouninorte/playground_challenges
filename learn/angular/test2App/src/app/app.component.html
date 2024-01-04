@@ -13,6 +13,8 @@
 
 <main class="main">
   <h2>Search bar</h2>
+  <app-search-bar    (searchTerm)="search($event)"/>
+
   <div class="content">
     <div class="left-side">
 
@@ -22,7 +24,7 @@
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
       <h1>Store</h1>
-      <app-listing></app-listing>
+      <app-listing [listingItems]="listingItems"></app-listing>
 
     </div>
   </div>

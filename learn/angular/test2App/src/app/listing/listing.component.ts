@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ListingItemComponent } from '../listing-item/listing-item.component';
 import { LISTING_ITEMS, ListingItem } from '../../data/listing-item';
 
@@ -10,5 +10,5 @@ import { LISTING_ITEMS, ListingItem } from '../../data/listing-item';
   styleUrl: './listing.component.scss'
 })
 export class ListingComponent {
-  listingItems: ListingItem[] = LISTING_ITEMS;
+  @Input() listingItems:ListingItem[] = LISTING_ITEMS;
 }
