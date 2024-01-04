@@ -1,0 +1,20 @@
+<div class="content-column">
+  <app-header />
+
+  <app-highlight-paragraph />
+  <main class="main">
+    <div class="content">
+      <div class="left-side">
+        <nav><app-filter /></nav>
+      </div>
+
+      <div class="divider" role="separator" aria-label="Divider"></div>
+      <div class="right-side">
+        <app-search-bar />
+        <app-listing />
+      </div>
+    </div>
+  </main>
+  <router-outlet></router-outlet>
+  <app-footer />
+</div>

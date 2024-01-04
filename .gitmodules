@@ -16,3 +16,6 @@
 [submodule "content/visual-merge-images"]
 	path = content/visual-merge-images
 	url = git@github.com:lcrojano/visual-merge-images.git
+[submodule "contributions/daily"]
+	path = contributions/daily
+	url = git@github.com:lcrojano/daily.git

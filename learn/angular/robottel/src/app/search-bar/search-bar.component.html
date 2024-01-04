@@ -1,0 +1,15 @@
+<div class="search-component">
+  <form class="search-form" action="" (ngSubmit)="onSubmit()"  #searchForm="ngForm">
+    <input class="search-bar" type="text" placeholder="Search..." [(ngModel)]="searchText" required name="search"/>
+    <button class="search-button" type="submit" [disabled]="!searchForm.form.valid">Search</button>
+  </form>
+  <div class="search-errors">
+    @if(!searchForm.form.valid) {
+      <div class="search-error">No results</div>
+    }
+  </div>
+</div>
+
+<div>
+  Search for {{ searchText }}
+</div>

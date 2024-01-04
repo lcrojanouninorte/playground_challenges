@@ -1,0 +1,21 @@
+<div id="filter-component">
+  <div class="content">
+    @for(filter of filters; track filter.name){
+      <div class="card"   >
+        <div class="card-header">
+          <h3>{{filter.name}}</h3>
+          <button (click)="toggleVisibility(filter)" class="close">X</button>
+        </div>
+        <div [class.card-dropped-down]="!filter.isVisible">
+          <div class="card-body">
+            <p>{{filter.description}}</p>
+          </div>
+          <div class="card-footer">
+            <p>{{filter.icon}}</p>
+          </div>
+
+        </div>
+      </div>
+    }
+   </div>
+</div>
