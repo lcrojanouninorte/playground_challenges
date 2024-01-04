@@ -1,1 +1,9 @@
-<p>cart works!</p>
+ <div class="cart-container">
+
+
+<div [class]="{ 'open': isOpen }" class="cart">
+  @for(item of cartItems; track item.name){
+    <app-cart-item [item]="item"/>
+  }
+</div>
+ </div>

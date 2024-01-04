@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ListingItem } from '../../data/listing-item';
+import { CartItem } from '../../data/cart-item';
 
 @Component({
   selector: 'app-listing-item',
@@ -18,7 +19,9 @@ export class ListingItemComponent {
     stock: 0
   };
 
-  addToCart(item: ListingItem) {
-    console.log(item);
+  @Output() addItem = new EventEmitter<CartItem>();
+
+  addToCart(item: CartItem) {
+    this.addItem.emit(item);
   }
 }

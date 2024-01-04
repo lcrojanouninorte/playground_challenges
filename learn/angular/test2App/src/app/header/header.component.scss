@@ -1,0 +1,17 @@
+.options {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: var(--inter-font);
+  color: var(--gray-700);
+
+}
+
+#main-header{
+  display: flex;
+   justify-content: space-between;
+  width: 100%;
+
+}
