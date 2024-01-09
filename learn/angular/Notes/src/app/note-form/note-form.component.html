@@ -1,0 +1,33 @@
+<div class="notes-form">
+
+    <form [formGroup]="noteForm" [class]="{ hide: !isOpen }" class="notes-form-container">
+      <div class="title-container">
+        <label for="title"> Title</label>
+        <input name="title" type="text" formControlName="title" />
+      </div>
+      <div class="content-container">
+        <label for="content"> Content</label>
+        <textarea name="content" placeholder="content" formControlName="content" required></textarea>
+
+      </div>
+
+      <div class="errors">
+
+        {{noteForm.get('title')?.value}}
+        {{noteForm.get('content')?.value}}
+        @if(noteForm.get('title')?.errors?.['required']){
+        <p>Title is required</p>
+        } @if(noteForm.get('content')?.errors?.['required']){
+        <p>Content is required</p>
+        }
+      </div>
+      <div class="add-note-button">
+        <button [class]="{ hide: !isOpen }" (click)="addNote()">add</button>
+      </div>
+    </form>
+
+    <div class="add-note-button">
+      <button [class]="{ hide: isOpen }" (click)="toggle()">+</button>
+    </div>
+
+</div>

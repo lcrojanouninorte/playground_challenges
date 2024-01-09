@@ -1,0 +1,49 @@
+
+@keyframes open {
+  from {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+
+  }
+  to {
+    border-radius: 0%;
+    width: 100%;
+    height: 100%;
+
+
+  }
+}
+
+
+.open-form{
+   animation: open 0.3s ease-in-out forwards;
+
+}
+
+.notes {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  padding: 1.5rem;
+  height: 80vh;
+  justify-items: start;
+  align-items: start;
+  background-color: rgba(248, 248, 248, 0.379);
+  position: relative;
+}
+
+ app-note-form {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 100%;
+  background-color: wheat;
+
+
+}
