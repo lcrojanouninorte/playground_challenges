@@ -2,12 +2,12 @@
   <div class="tasks">
     <h2>Task List</h2>
     @for(task of tasks; track task.id){
-      <app-task-item [task]="task" ></app-task-item>
+      <app-task-item  (deleteTask)="deleteTask(task)" [task]="task" ></app-task-item>
     }
   </div>
 
   <div class="add-tasks">
-    <input type="text">
-    <button>➕</button>
+    <input type="text" [(ngModel)]="task"  >
+    <button (click)="addTask()">➕</button>
   </div>
 </section>

@@ -1,1 +1,12 @@
-<p>tasks-description works!</p>
+<section class="tasks-description">
+<div>
+  <div style="display: flex;">
+    <input type="text" [(ngModel)]="task.title">
+    <input type="checkbox"  [(ngModel)]="task.completed">
+  </div>
+
+  <textarea [(ngModel)]="task.description" name="" id="" cols="30" rows="10"></textarea>
+
+</div>
+<button (click)="updateTask()">💾</button>
+</section>
