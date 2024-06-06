@@ -14,5 +14,6 @@ import { NOTES, Note } from '../Data/notes';
 })
 export class AppComponent {
   title = 'Notes';
-  notes: Note[] = NOTES;
+  notes: Note[] =  [...NOTES];
+  notes2: Note[] = [...NOTES];
 }

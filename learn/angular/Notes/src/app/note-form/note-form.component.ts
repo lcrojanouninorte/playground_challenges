@@ -30,9 +30,10 @@ export class NoteFormComponent {
   }
 
   addNote(){
+
+
     if(this.noteForm.valid) {
       let note = this.noteForm.value as Note;
-      note.id = 1;
       note.date = Date.now().toString();
       this.updateNotes.emit(this.noteForm.value as Note);
       this.toggle();

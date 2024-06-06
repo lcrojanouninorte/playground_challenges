@@ -19,7 +19,16 @@ export class NotesComponent {
   }
 
   updateNotes($event: Note) {
-    this.notes.push($event);
+      let newNote = $event;
+      let ids = this.notes.map((a) => a.id);
+      let maxId = 0;
+      if (ids.length > 0) {
+        maxId = Math.max(...ids);
+      }
+
+      newNote.id = maxId + 1;
+      this.notes.unshift(newNote);
+
 
   }
 }
