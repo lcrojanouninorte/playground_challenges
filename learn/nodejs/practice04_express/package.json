@@ -1,0 +1,22 @@
+{
+  "name": "practice04_express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "standards": "^0.1.0"
+  },
+  "eslintConfig": {
+    "extends": "standards"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "hbs": "^4.2.0"
+  }
+}
