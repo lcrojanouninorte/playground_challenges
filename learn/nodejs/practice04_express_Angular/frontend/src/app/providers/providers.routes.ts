@@ -6,10 +6,10 @@ import  ProvidersEditComponent  from "./providers-edit/providers-edit.component"
 import  ProvidersDeleteComponent  from "./providers-delete/providers-delete.component";
 
 export const routes: Route[] = [
-  { path: '', loadComponent: () => ProvidersListComponent},
-  { path: 'details', component:  ProvidersDetailsComponent },
-  { path: 'add', component: ProvidersAddComponent },
-  { path: 'edit', component: ProvidersEditComponent },
-  { path: 'delete', component: ProvidersDeleteComponent }
+  { path: '', component: ProvidersListComponent},
+  { path: 'info/:id', component:  ProvidersDetailsComponent },
+  { path: 'addprovider', component: ProvidersAddComponent },
+  { path: 'edit/:id', component: ProvidersEditComponent },
+  { path: 'delete/:id', component: ProvidersDeleteComponent }
 
 ]

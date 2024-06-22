@@ -14,13 +14,22 @@ const companySchema = new mongoose.Schema(
     }
 );
 const providerSchema = new mongoose.Schema({
-    id: Number,
+  //  id: Number,
     firstname: String,
     lastname: String,
     position: String,
     company: companySchema
 
-});
+}, {
+        toJSON: { virtuals: true }, // Enable virtuals to be included in toJSON output
+        id: false // Disable default virtual 'id' field based on _id
+      });
+
+      // Define a virtual property 'id' based on _id
+providerSchema.virtual('id').get(function() {
+    return this._id; // Convert _id to a hex string (or use any desired format)
+  });
+  
 module.exports = {
     providerSchema,
     companySchema

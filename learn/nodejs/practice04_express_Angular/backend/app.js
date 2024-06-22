@@ -11,10 +11,22 @@ var apiRouter = require('./api/routes/api.routes');
 var usersRouter = require('./routes/users');
 
 var app = express();
+//Cors
+const cors = require('cors');
+
+const corsOptions = {
+  //origin: 'http://localhost:4200', // Allow only this origin
+  //methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow these HTTP methods
+  //allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers
+};
+
+// Use the CORS middleware with options
+app.use(cors(corsOptions));
+
 
 //database connection
 const db = require('./api/database/db');
-
+ 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');

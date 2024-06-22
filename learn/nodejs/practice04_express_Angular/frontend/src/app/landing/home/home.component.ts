@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export default class HomeComponent {
-
+   title: string = 'Welcome to the Magic Shop';
 }

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about/about.component';
 import HomeComponent from './home/home.component';
 import { RouterModule } from '@angular/router';
-import routes from './providers.routes';
+import routes from './landing.routes';
 
 
 

@@ -1,1 +1,90 @@
-<p>providers-add works!</p>
+<!-- Add Provider Section -->
+<section class="page-section" id="add-provider-form">
+  <div class="container">
+    <div class="justify-content-center row">
+      <div class="text-center col-lg-8">
+        <h2 class="mt-0">Add a New Provider</h2>
+        <hr class="my-4 divider">
+      </div>
+    </div>
+    <div class="justify-content-center row">
+      <!-- Nested Row within Card Body -->
+      <div class="border-0 o-hidden row">
+        <div class="col-lg-12">
+          <form class="user" [formGroup]="providerForm" (submit)="add()">
+            <div class="form-group row">
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <label for="inputFirstName">First Name</label>
+                <input formControlName="firstname" type="text" class="form-control form-control-user" name="firstname" id="inputFirstName" required>
+              </div>
+              <div class="col-sm-6">
+                <label for="inputLastName">Last Name</label>
+                <input formControlName="lastname" type="text" class="form-control form-control-user" name="lastname" id="inputLastName" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPosition">Position</label>
+              <input formControlName="position" type="text" class="form-control form-control-user" name="position" id="inputPosition" required>
+            </div>
+            <ng-container [formGroup]="companyForm" >
+
+            <div class="form-group row">
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <label for="inputEmail">Email</label>
+                <input formControlName="email" type="email" class="form-control form-control-user" name="email" id="inputEmail" required>
+              </div>
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <label for="inputPhone">Phone</label>
+                <input formControlName="phone" type="phone" class="form-control form-control-user" name="phone" id="inputPhone" required>
+              </div>
+            </div>
+            <hr class="my-4 divider">
+            <div class="form-group">
+              <label for="inputCompanyName">Company</label>
+              <input formControlName="company_name" type="text" class="form-control form-control-user" name="company_name" id="inputCompanyName"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input formControlName="address" type="text" class="form-control" name="address" id="inputAddress" required>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Address 2</label>
+              <input formControlName="address2" type="text" class="form-control" name="address2" id="inputAddress2">
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                <label for="inputCity">City</label>
+                <input formControlName="city" type="text" class="form-control" name="city" id="inputCity" required>
+              </div>
+              <div class="col-md-4 form-group">
+                <label for="inputState">State</label>
+                <input formControlName="state" type="text" class="form-control" name="state" id="inputState" maxlength="2" required>
+              </div>
+              <div class="col-md-2 form-group">
+                <label for="inputZipCode">Zip Code</label>
+                <input formControlName="postal_code" type="text" class="form-control" maxlength="5" name="postal_code" id="inputZipCode" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <label for="inputDescription">Description</label>
+                <textarea formControlName="description" class="form-control form-control-user" name="description" id="inputDescription"
+                  required></textarea>
+              </div>
+              <div class="col-sm-6">
+                <label for="inputTagLine">Tag Line</label>
+                <textarea formControlName="tagline" class="form-control form-control-user" name="tagline" id="inputTagLine" required></textarea>
+              </div>
+            </div>
+
+            </ng-container>
+            <button class="btn-block btn btn-lg btn-primary" type="submit">Add Provider</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+{{providerForm.value | json}}
