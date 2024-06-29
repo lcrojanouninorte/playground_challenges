@@ -1,0 +1,26 @@
+<article>
+  <h1 class="font-bold text-center text-xl">
+    My Hero
+  </h1>
+  <form class="flex flex-col space-y-4"    #heroForm="ngForm">
+    <ng-container  *ngIf="hero.id">
+      <label  for="id">ID:{{hero.id}}</label>
+      <input type="number" name="id" [ngModel]="hero.id" >
+
+    </ng-container>
+    <label for="name">Name:</label>
+    <input [ngModel]="hero.name" placeholder="Hero name" name="name" type="text" required >
+
+    <button (click)="onSubmit(heroForm)"  [disabled]="!heroForm.valid"   type="submit" class="bg-blue-500 p-2 rounded-lg text-white">
+      Submit
+    </button>
+
+    <button (click)="heroForm.reset()"       class="bg-blue-500 p-2 rounded-lg text-white">
+
+      reset
+    </button>
+  </form>
+
+  {{hero.name}} - {{hero.id}}
+  {{heroForm.value| json}}
+</article>

@@ -1,0 +1,24 @@
+<section class="flex flex-col space-x-3 shadow-sm rounded-sm"> 
+    <div class="flex flex-row justify-between items-center bg-gray-100 p-3">
+        <h1 class="font-bold text-lg">Heroes</h1>
+        <a routerLink="/heroes/create" class="bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded font-bold text-white">Create</a>
+    </div>
+    <div class="flex flex-col space-y-3 p-3">
+        <div class="flex flex-row justify-between items-center bg-gray-200 p-3">
+        <div class="w-1/4">Name</div>
+        <div class="w-1/4">Power</div>
+        <div class="w-1/4">Alter Ego</div>
+        <div class="w-1/4">Actions</div>
+        </div>
+        <div *ngFor="let hero of heroes" class="flex flex-row justify-between items-center bg-gray-100 p-3">
+        <div class="w-1/4">{{ hero.name }}</div>
+        <div class="w-1/4">{{ hero.attack }}</div>
+        <div class="w-1/4">{{ hero.defense }}</div>
+        <div class="w-1/4">
+            <a routerLink="/heroes/{{ hero.id }}" class="bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded font-bold text-white">View</a>
+            <a routerLink="/heroes/{{ hero.id }}/edit" class="bg-green-500 hover:bg-green-700 px-4 py-2 rounded font-bold text-white">Edit</a>
+            <button (click)="deleteHero(hero.id)" class="bg-red-500 hover:bg-red-700 px-4 py-2 rounded font-bold text-white">Delete</button>
+        </div>
+        </div>
+    </div>
+</section>

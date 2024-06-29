@@ -1,0 +1,10 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'mag-default',
+  templateUrl: './default.component.html',
+  styleUrl: './default.component.css'
+})
+export class DefaultComponent {
+
+}

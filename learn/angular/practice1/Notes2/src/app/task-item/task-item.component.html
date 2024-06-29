@@ -1,0 +1,9 @@
+<article class="task-item">
+ <div ><input   type="checkbox" [(ngModel)]="task.completed">
+ <span (click)="goToTask(task)">  {{task.title}}</span>
+</div>
+
+ <div>
+  <button (click)="delete()">🗑️</button>
+ </div>
+</article>

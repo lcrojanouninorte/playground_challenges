@@ -1,0 +1,21 @@
+<h1 class="text-center text-xl"><b>My Heroes</b></h1>
+
+<div class="flex flex-row justify-around">
+
+  <ul >
+  <ng-container *ngFor="let hero of heroes$ | async trackBy: heroById ">
+       <li  (click)="onSelect(hero)" [routerLink]="['', {outlets: {edit: ['edit', hero.id]}}]"
+       routerLinkActive="bg-blue-800">
+      <span class="text-blue-500">{{hero.id}}</span> {{hero.name}}
+    </li>
+    </ng-container>
+
+  </ul>
+  <div *ngIf="hero; else noHero "  >
+    {{hero.name}} is my hero
+  </div>
+
+  <ng-template  #noHero>
+    Select A Hero
+  </ng-template>
+</div>

@@ -1,0 +1,7 @@
+.note-item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 200px;
+
+}
